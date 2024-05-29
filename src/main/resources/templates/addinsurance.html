@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Insurance</title>
+</head>
+<body>
+    <h1>Add Insurance</h1>
+    <form  th:action="@{/insurance/add}" th:method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email"   name="email" >
+        </div>
+        <div>
+            <label for="card">Insurance Card Image:</label>
+            <input type="file" id="card" name="card"  accept="image/*" >
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

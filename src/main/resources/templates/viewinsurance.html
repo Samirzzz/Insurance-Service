@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Insurance</title>
+</head>
+<body>
+    <h1>Insurance Details</h1>
+
+    <table border="1">
+        <tr>
+            <th>Email</th>
+            <th>Card Image</th>
+        </tr>
+        <tr th:each="insurance : ${insurances}">
+            <td th:text="${insurance.email}">Email</td>
+            <td><img th:src="@{${insurance.card}}"  style="width: 200px; height: auto;"/></td>
+        </tr>
+    </table>
+</body>
+</html>
